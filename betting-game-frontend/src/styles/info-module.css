@@ -1,0 +1,254 @@
+info-module {
+  position: relative;
+  grid-template-columns: 1fr;
+  display: grid;
+  justify-self: stretch;
+}
+
+info-module > * {
+  background-color: var(--paper);
+}
+
+svg#arrow-svg {
+  position: absolute;
+  max-width: 90px;
+  top: -50px;
+  left: -30px;
+  overflow: visible;
+  transform: rotate(-40deg);
+}
+
+.arrow-2 {
+  filter: url(#outer-glow-24);
+}
+
+.arrow-3 {
+  filter: url(#outer-glow-25);
+  fill: #fff !important;
+}
+
+.arrow-1 {
+  filter: url(#outer-glow-23);
+}
+
+/*choose*/
+choose-box {
+  color: var(--blue);
+  display: grid;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 3px solid white;
+  padding: 20px;
+  box-shadow: 0 0 5px, 0 0 10px, 0 0 25px;
+  text-shadow: 0 0 0.625em, 0 0 1.25em, 0 0 1.875em;
+}
+
+.or-text,
+.choose-text {
+  fill: #55addd;
+  font-size: 30px;
+  font-family: Tourney, sans-serif;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.or-text {
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.odd-or-even-text,
+.number-text,
+.color-text {
+  color: var(--red);
+  font-family: Tourney, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.odd-or-even-text .or-text {
+  color: var(--red);
+}
+
+.or-text {
+  font-size: 14px;
+}
+
+/*winner*/
+results-box {
+  width: 100%;
+  color: var(--blue);
+  display: grid;
+  text-align: center;
+  align-items: center;
+  gap: 15px;
+  border: 3px solid white;
+  padding: 20px;
+  box-shadow: 0 0 5px, 0 0 10px, 0 0 25px;
+  text-shadow: 0 0 0.3125em, 0 0 0.625em, 0 0 1.25em;
+}
+
+results-box .congrats-text {
+  fill: #55addd;
+  font-family: Tourney, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 24px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+results-box .congrats-text span {
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+.congrats-text div {
+  padding-top: 20px;
+  display: grid;
+  gap: 20px;
+}
+.congrats-text div .or-text {
+  font-size: 14px;
+}
+.congrats-text div * {
+  text-shadow: unset !important;
+}
+.play-again {
+  font-family: Tourney, sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  color: var(--red);
+  font-size: 32px;
+  border: 3px solid var(--red);
+  padding: 10px;
+  box-shadow: 0 0 0.3125rem, 0 0 0.625rem, 0 0 1.5625rem;
+  text-shadow: 0 0 0.625em, 0 0 1.25em, 0 0 1.875em;
+}
+
+@media (max-width: 580px) {
+  info-module {
+    --scale: calc(100vw / 580);
+    grid-column-start: unset;
+    justify-content: center;
+    max-width: 90vw;
+    margin: 0 auto;
+    /*width: 98.5%;*/
+  }
+
+  choose-box,
+  results-box {
+    display: flex;
+    text-align: start;
+  }
+  results-box .congrats-text {
+    display: flex;
+    gap: 10px;
+  }
+
+  svg#arrow-svg {
+    top: unset;
+    bottom: -100px;
+    left: 0;
+    transform: rotateZ(180deg) rotate(45deg);
+  }
+
+  div.result {
+    font-size: 4rem;
+  }
+
+  results-box div {
+    display: grid;
+    gap: 10px;
+    justify-items: center;
+  }
+
+  results-box button {
+    width: 100%;
+  }
+  results-box {
+    gap: 40px;
+  }
+  results-box .congrats-text {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  info-module {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 440px) {
+  info-module {
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 350px) {
+  info-module {
+    transform: scale(0.5);
+  }
+}
+
+@media (min-width: 580px) and (max-width: 1050px) {
+  .choose-text {
+    font-size: 30px;
+  }
+
+  choose-box,
+  results-box {
+    display: grid;
+
+    text-align: center;
+    justify-content: center;
+  }
+  results-box .congrats-text {
+    display: grid;
+  }
+
+  info-module {
+    grid-column: 1 / 2;
+    justify-self: center;
+  }
+  svg#arrow-svg {
+    position: absolute;
+    top: -30px;
+    left: unset;
+    right: -70px;
+    transform: rotateY(200deg) rotate(-45deg) scale(0.7);
+  }
+}
+
+@media (min-width: 1700px) {
+  info-module {
+    grid-column: 2 / -1;
+  }
+  info-module > * {
+    display: flex;
+    text-align: left;
+    justify-content: space-around;
+  }
+  result-box .choose-text {
+    justify-content: initial;
+  }
+  svg#arrow-svg {
+    position: absolute;
+    top: -20px;
+    left: unset;
+    left: -100px;
+    transform: rotate(75deg) rotateX(180deg) scale(1.4);
+  }
+
+  .odd-or-even-text,
+  .number-text,
+  .color-text {
+    font-size: 35px;
+  }
+}

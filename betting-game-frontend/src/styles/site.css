@@ -1,0 +1,157 @@
+@import "preset.css";
+
+@import "setup.css";
+
+@import "settings.css";
+@import "developer-styles.css";
+
+@import "structure.css";
+
+@import "typography.css";
+
+@import "animation.css";
+@import "components.css";
+@import "forms.css";
+
+@import "modules.css";
+
+body {
+  background-color: var(--paper);
+  background-image: url("../assets/images/wall-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-blend-mode: darken;
+
+  overflow-x: hidden;
+
+  cursor: url("../assets/images/neon-cursor.cur"), auto;
+  user-select: none;
+}
+
+.hide {
+  display: none !important;
+}
+.pointer-events-none {
+  pointer-events: none !important;
+}
+
+label {
+  user-select: none;
+}
+
+h1.attention-voice {
+  max-width: 800px;
+  /*display: flex;*/
+  position: relative;
+}
+
+h1.attention-voice::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: white;
+
+  width: 100%;
+  height: 3px;
+
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 82px #0fa,
+    0 0 92px #0fa, 0 0 151px #0fa;
+
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: colorFlicker steps(100) 5s infinite;
+}
+
+h1 span,
+.congrats-text span {
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 82px #0fa,
+    0 0 92px #0fa, 0 0 151px #0fa;
+
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: colorFlicker steps(100) 40s;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+}
+
+.loading-screen .container {
+  /* font-size: 2.5rem; */
+  color: var(--paper);
+  /* font-weight: 700; */
+  /* margin-bottom: 1rem; */
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: grid;
+  justify-items: center;
+  width: 100%;
+}
+.loading-screen h1 {
+  font-size: clamp(1.5rem, 8vw, 6rem);
+  color: white;
+}
+
+.loading-screen .container picture {
+  max-width: clamp(30px, 12vw, 300px);
+  /* rotate infinetly in steps */
+  animation: loadingRotate 2s infinite;
+  animation-timing-function: linear;
+  position: relative;
+  mix-blend-mode: multiply;
+  /* top: -30px; */
+}
+.loading-screen picture:nth-last-of-type(1) {
+  animation-delay: 0.6s;
+}
+.loading-screen picture:nth-last-of-type(2) {
+  animation-delay: 0.4s;
+}
+.loading-screen picture:nth-last-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+.loading-screen div.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@keyframes loadingRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+inner-column {
+  --brightness: 1;
+}
+.dimmed {
+  --brightness: 0.14;
+  filter: brightness(var(--brightness));
+}
+.dimmed numbers-grid {
+  pointer-events: none;
+}
+
+@media (max-width: 1500px) {
+  roulette-module {
+    /* overflow-y: none; */
+  }
+}
