@@ -6,6 +6,10 @@ Welcome to the Realtime Betting Game built on the L3 OP-MODE-CELESTIA Chain! Thi
   <img src="https://github.com/degenbuilder7/realtime-betting-game-on-l3/assets/94379406/2d9f0128-46c7-4920-b17f-717155499078" alt="Screenshot">
 </div>
 
+## Architecture of the project
+
+![image](https://github.com/degenbuilder7/realtime-betting-game-on-l3/assets/94379406/348511e9-4d03-47b3-a6a8-fec8217d14c9)
+
 ## How to Play
 
 1. **Place Your Bet**: Choose from different betting options, including:
