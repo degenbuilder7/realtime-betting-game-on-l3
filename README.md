@@ -2,6 +2,10 @@
 
 Welcome to the Realtime Betting Game built on the L3 OP-MODE-CELESTIA Chain! This project brings the excitement of betting on a roulette-style game to the blockchain. Players can wager on various outcomes and see results in real-time, all powered by GELLATO VRF, Hyperlane, and Kurtosis technologies.
 
+<div style="display:flex;justify-content:center">
+  <img src="https://github.com/degenbuilder7/realtime-betting-game-on-l3/assets/94379406/2d9f0128-46c7-4920-b17f-717155499078" alt="Screenshot">
+</div>
+
 ## How to Play
 
 1. **Place Your Bet**: Choose from different betting options, including:
