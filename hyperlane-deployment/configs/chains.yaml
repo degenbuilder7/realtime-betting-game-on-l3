@@ -1,0 +1,8 @@
+gaming:
+  name: gaming
+  chainId: 60385
+  domainId: 60385
+  protocol: ethereum
+  rpcUrls:
+    - http: "https://rpc-useful-aquamarine-rhinoceros-dufw1ydgcn.t.conduit.xyz"
+

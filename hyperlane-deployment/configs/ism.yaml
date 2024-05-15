@@ -1,0 +1,5 @@
+gaming:
+  threshold: 1
+  validators:
+    - "0xdFB4fbbaf602C76E5B30d0E97F01654D71F23e54"
+
