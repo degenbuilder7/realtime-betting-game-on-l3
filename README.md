@@ -31,7 +31,7 @@ Welcome to the Realtime Betting Game built on the L3 OP-MODE-CELESTIA Chain! Thi
 
 ## Smart Contract Details
 
-- **Minimum Bet**: 0.001 ETH
+- **Minimum Bet**: 0.001 ETH  or in explorer 100 000 000 000 000
 - **House Balance**: The contract ensures that the house (contract) and sponsor wallet remain solvent. If the house balance is too low, it can be refilled by sending ETH directly to the contract address.
 - **Random Number Generation**: The contract utilizes GELLATO VRF (Verifiable Random Function) for secure and unbiased random number generation.
 - **Interchain Security Module**: Provides additional security measures for interchain communication.
