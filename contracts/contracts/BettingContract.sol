@@ -11,7 +11,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 *******************************************/
 
-/*** @notice REALTIME ON-Chain Betting using on L3 OP-MODE_CELESTIA CHAIN powered by GELLATO VRF
+/*** @notice REALTIME ON-Chain Betting on L3 OP-MODE_CELESTIA CHAIN powered by GELLATO VRF
  *** Only supports one bet (single number, black/red, even/odd, 1st/2nd or 1st/2nd/3rd of board) per spin.
  *** User places bet by calling applicable payable function, then calls spinBettingWheel(),
  *** hardcoded minimum bet of .001 ETH , winnings paid from this contract **/

@@ -19,9 +19,21 @@ import App from "./App";
 import "@rainbow-me/rainbowkit/styles.css";
 import "./styles/site.css";
 
+const gamingl3chain = {
+  id: 60385,
+  name: 'gamingonl3-OP-MODE-CELESTIA',
+  nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+  rpcUrls: {
+    default: { http: ['https://rpc-useful-aquamarine-rhinoceros-dufw1ydgcn.t.conduit.xyz'] },
+  },
+  blockExplorers: {
+    default: { name: 'Blockscout', url: 'https://explorerl2new-useful-aquamarine-rhinoceros-dufw1ydgcn.t.conduit.xyz' },
+  },
+};
+
 //wagmi
 const { chains, provider } = configureChains(
-  [sepolia],
+  [gamingl3chain],
   [publicProvider()]
 );
 
